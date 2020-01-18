@@ -30,6 +30,19 @@ textarea {
   text-align: center;
   border-radius: 15px;
 }
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+.next {
+  background-color: #f1f1f1;
+  color: black;
+}
+.round {
+  border-radius: 50%;
+}
+
 /* rows and cols styles */
 .container {
   text-align: center;
