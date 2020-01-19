@@ -20,16 +20,17 @@ function calendar() {
   time9.append(timeat9);
 
   var col9 = document.querySelector("#col9");
-  if (timeat9 == m.format("h [AM]").toString()) {
+  if (timeat9 == m.format("H").toString()) {
     col9.style.backgroundColor = "red";
     col9.append("Current time");
-  } else if (m.format("h") < m.format("9")) {
+  } else if (m.format("H") < m.format("09")) {
     col9.style.backgroundColor = "green";
     col9.append("Type your events here then save it by click the locker!!");
   } else {
     col9.style.backgroundColor = "silver";
     col9.append("events happened");
   }
+  console.log(m.format("h"));
   //Time at 10AM
   var timeat10 = m.format("10 [AM]").toString();
   time10.append(timeat10);
@@ -83,7 +84,7 @@ function calendar() {
   if (timeat1 == m.format("h [PM]").toString()) {
     col1.style.backgroundColor = "red";
     col1.append("Current time");
-  } else if (m.format("h") < m.format("1")) {
+  } else if (m.format("H") < m.format("13")) {
     col1.style.backgroundColor = "green";
     col1.append("Type your events here then save it by click the locker!!");
   } else {
@@ -98,7 +99,7 @@ function calendar() {
   if (timeat2 == m.format("h [PM]").toString()) {
     col2.style.backgroundColor = "red";
     col2.append("Current time");
-  } else if (m.format("h") < m.format("2")) {
+  } else if (m.format("H") < m.format("14")) {
     col2.style.backgroundColor = "green";
     col2.append("Type your events here then save it by click the locker!!");
   } else {
@@ -113,7 +114,7 @@ function calendar() {
   if (timeat3 == m.format("h [PM]").toString()) {
     col3.style.backgroundColor = "red";
     col3.append("Current time");
-  } else if (m.format("h") < m.format("3")) {
+  } else if (m.format("H") < m.format("15")) {
     col3.style.backgroundColor = "green";
     col3.append("Type your events here then save it by click the locker!!");
   } else {
@@ -128,7 +129,7 @@ function calendar() {
   if (timeat4 == m.format("h [PM]").toString()) {
     col4.style.backgroundColor = "red";
     col4.append("Current time");
-  } else if (m.format("h") < m.format("4")) {
+  } else if (m.format("H") < m.format("16")) {
     col4.style.backgroundColor = "green";
     col4.append("Type your events here then save it by click the locker!!");
   } else {
@@ -137,3 +138,5 @@ function calendar() {
   }
 }
 calendar();
+
+
