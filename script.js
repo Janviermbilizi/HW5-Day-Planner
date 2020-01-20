@@ -20,7 +20,7 @@ function calendar() {
   time9.append(timeat9);
 
   var col9 = document.querySelector("#col9");
-  if (timeat9 == m.format("H").toString()) {
+  if (timeat9 == m.format("H [AM]").toString()) {
     col9.style.backgroundColor = "red";
     col9.append("Current time");
   } else if (m.format("H") < m.format("09")) {
@@ -30,16 +30,15 @@ function calendar() {
     col9.style.backgroundColor = "silver";
     col9.append("events happened");
   }
-  console.log(m.format("h"));
   //Time at 10AM
   var timeat10 = m.format("10 [AM]").toString();
   time10.append(timeat10);
 
   var col10 = document.querySelector("#col10");
-  if (timeat10 == m.format("h [AM]").toString()) {
+  if (timeat10 == m.format("H [AM]").toString()) {
     col10.style.backgroundColor = "red";
     col10.append("Current time");
-  } else if (m.format("h") < m.format("10")) {
+  } else if (m.format("H") < m.format("10")) {
     col10.style.backgroundColor = "green";
     col10.append("Type your events here then save it by click the locker!!");
   } else {
@@ -54,7 +53,7 @@ function calendar() {
   if (timeat11 == m.format("h [AM]").toString()) {
     col11.style.backgroundColor = "red";
     col11.append("Current time");
-  } else if (m.format("h") < m.format("11")) {
+  } else if (m.format("H") < m.format("11")) {
     col11.style.backgroundColor = "green";
     col11.append("Type your events here then save it by click the locker!!");
   } else {
@@ -69,7 +68,7 @@ function calendar() {
   if (timeat12 == m.format("h [PM]").toString()) {
     col12.style.backgroundColor = "red";
     col12.append("Current time");
-  } else if (m.format("h") < m.format("12")) {
+  } else if (m.format("H") < m.format("12")) {
     col12.style.backgroundColor = "green";
     col12.append("Type your events here then save it by click the locker!!");
   } else {
@@ -136,6 +135,6 @@ function calendar() {
     col4.style.backgroundColor = "silver";
     col4.append("events happened");
   }
+  console.log(m.format("H"));
 }
 calendar();
-
