@@ -18,7 +18,7 @@ This is only a website and does not need installation. it is currently hosted in
 
 <strong>Usage</strong>
 
-This website is simple, clean, easy to use and undertand. When you go to the site, the header displays your today's day and date. below that, it displays a calendar with your work hours, 9 AM to 4PM. if that time is passed, the next column will have a silver color background that says <i>events happened</i> and will not all you to record and save a new event. if that time is a current time, the next column will have a red color background that says <i>current event/time</i> and will not all you to record and save a new event. if that time is a future time, the next column will have a green color background that displays your saved events or an input placeholder to record and save your event.
+This website is simple, clean, easy to use and undertand. When you go to the site, the header displays your today's day and date. below that, it displays a calendar with your work hours, 9 AM to 4PM. if that time is passed, the next column will have a silver color background that says <i>events happened</i> and will not allow you to record or save a new event. if that time is a current time, the next column will have a red color background that says <i>current event/time</i> and will not allow you to record or save a new event. if that time is a future time, the next column will have a green color background that displays your saved events or an input placeholder that allows you to record and save your future event.
 
 <strong>Support and Contribution</strong>
 
