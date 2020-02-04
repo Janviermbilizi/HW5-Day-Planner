@@ -24,15 +24,11 @@ function calendar() {
     col9.style.backgroundColor = "red";
     col9.append("Current time");
   } else if (m.format("H") < m.format("09")) {
-    col9.style.backgroundColor = "green";
-    col9.append("Type your events here then save it by click the locker!!");
-    col9.addEventListener("click", function() {
-      $(col9).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col9.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col9.append(x);
   } else {
     col9.style.backgroundColor = "silver";
     col9.append("events happened");
@@ -46,15 +42,11 @@ function calendar() {
     col10.style.backgroundColor = "red";
     col10.append("Current time");
   } else if (m.format("H") < m.format("10")) {
-    col10.style.backgroundColor = "green";
-    col10.append("Type your events here then save it by click the locker!!");
-    col10.addEventListener("click", function() {
-      $(col10).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col10.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col10.append(x);
   } else {
     col10.style.backgroundColor = "silver";
     col10.append("events happened");
@@ -68,15 +60,11 @@ function calendar() {
     col11.style.backgroundColor = "red";
     col11.append("Current time");
   } else if (m.format("H") < m.format("11")) {
-    col11.style.backgroundColor = "green";
-    col11.append("Type your events here then save it by click the locker!!");
-    col11.addEventListener("click", function() {
-      $(col11).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col11.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col11.append(x);
   } else {
     col11.style.backgroundColor = "silver";
     col11.append("events happened");
@@ -90,15 +78,11 @@ function calendar() {
     col12.style.backgroundColor = "red";
     col12.append("Current time");
   } else if (m.format("H") < m.format("12")) {
-    col12.style.backgroundColor = "green";
-    col12.append("Type your events here then save it by click the locker!!");
-    col12.addEventListener("click", function() {
-      $(col12).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col12.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col12.append(x);
   } else {
     col12.style.backgroundColor = "silver";
     col12.append("events happened");
@@ -112,15 +96,11 @@ function calendar() {
     col1.style.backgroundColor = "red";
     col1.append("Current time");
   } else if (m.format("H") < m.format("13")) {
-    col1.style.backgroundColor = "green";
-    col1.append("Type your events here then save it by click the locker!!");
-    col1.addEventListener("click", function() {
-      $(col1).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col1.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col1.append(x);
   } else {
     col1.style.backgroundColor = "silver";
     col1.append("events happened");
@@ -134,15 +114,11 @@ function calendar() {
     col2.style.backgroundColor = "red";
     col2.append("Current time");
   } else if (m.format("H") < m.format("14")) {
-    col2.style.backgroundColor = "green";
-    col2.append("Type your events here then save it by click the locker!!");
-    col2.addEventListener("click", function() {
-      $(col2).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col2.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col2.append(x);
   } else {
     col2.style.backgroundColor = "silver";
     col2.append("events happened");
@@ -156,18 +132,14 @@ function calendar() {
     col3.style.backgroundColor = "red";
     col3.append("Current time");
   } else if (m.format("H") < m.format("15")) {
-    col3.style.backgroundColor = "green";
-    col3.append("Type your events here then save it by click the locker!!");
-    col3.addEventListener("click", function() {
-      $(col3).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col3.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col3.prepend(x);
   } else {
     col3.style.backgroundColor = "silver";
-    col3.append("events happened");
+    col3.prepend("events happened");
   }
   //Time at 4PM
   var timeat4 = m.format("4 [PM]").toString();
@@ -178,19 +150,41 @@ function calendar() {
     col4.style.backgroundColor = "red";
     col4.append("Current time");
   } else if (m.format("H") < m.format("16")) {
-    col4.style.backgroundColor = "green";
-    var p = "Type your events here then save it by click the locker!!";
-    col4.append(p);
-    col4.addEventListener("click", function() {
-      $(col4).empty();
-      var x = document.createElement("INPUT");
-      x.setAttribute("type", "text");
-      x.setAttribute("placeholder", "type your event here!!");
-      col4.append(x);
-    });
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col4.prepend(x);
   } else {
     col4.style.backgroundColor = "silver";
     col4.append("events happened");
   }
+  //Time at 5
+  var timeat5 = m.format("5 [PM]").toString();
+  time5.append(timeat5);
+
+  var col5 = document.querySelector("#col5");
+  if (timeat5 == m.format("h [PM]").toString()) {
+    col5.style.backgroundColor = "red";
+    col5.append("Current time");
+  } else if (m.format("H") < m.format("17")) {
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("placeholder", "type your event here!!");
+    x.style.backgroundColor = "green";
+    col5.prepend(x);
+  } else {
+    col5.style.backgroundColor = "silver";
+    col5.append("events happened");
+  }
 }
 calendar();
+
+$(".saveBtn").click(function() {
+  var thisId = $(this).attr();
+  var textValue = $("#text" + thisId).val();
+  events.push({ x: thisId, value: textValue });
+  console.log(events);
+});
+var events = [];
+localStorage.setItem(events, JSON.stringify());
