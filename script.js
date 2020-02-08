@@ -3,18 +3,18 @@ var currentDay = document.querySelector("#currentDay");
 var m = moment();
 var today = m.format("dddd, MMMM Do YYYY").toString();
 currentDay.append(today);
+var x;
+var time9 = document.querySelector("#time9");
+var time10 = document.querySelector("#time10");
+var time11 = document.querySelector("#time11");
+var time12 = document.querySelector("#time12");
+var time1 = document.querySelector("#time1");
+var time2 = document.querySelector("#time2");
+var time3 = document.querySelector("#time3");
+var time4 = document.querySelector("#time4");
 
 //calendar function
 function calendar() {
-  var time9 = document.querySelector("#time9");
-  var time10 = document.querySelector("#time10");
-  var time11 = document.querySelector("#time11");
-  var time12 = document.querySelector("#time12");
-  var time1 = document.querySelector("#time1");
-  var time2 = document.querySelector("#time2");
-  var time3 = document.querySelector("#time3");
-  var time4 = document.querySelector("#time4");
-
   //Time at 9AM
   var timeat9 = m.format("9 [AM]").toString();
   time9.append(timeat9);
@@ -24,9 +24,9 @@ function calendar() {
     col9.style.backgroundColor = "red";
     col9.append("Current time");
   } else if (m.format("H") < m.format("09")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input9");
     x.style.backgroundColor = "green";
     col9.append(x);
   } else {
@@ -42,9 +42,9 @@ function calendar() {
     col10.style.backgroundColor = "red";
     col10.append("Current time");
   } else if (m.format("H") < m.format("10")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input10");
     x.style.backgroundColor = "green";
     col10.append(x);
   } else {
@@ -60,9 +60,9 @@ function calendar() {
     col11.style.backgroundColor = "red";
     col11.append("Current time");
   } else if (m.format("H") < m.format("11")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input11");
     x.style.backgroundColor = "green";
     col11.append(x);
   } else {
@@ -78,9 +78,9 @@ function calendar() {
     col12.style.backgroundColor = "red";
     col12.append("Current time");
   } else if (m.format("H") < m.format("12")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input12");
     x.style.backgroundColor = "green";
     col12.append(x);
   } else {
@@ -96,9 +96,9 @@ function calendar() {
     col1.style.backgroundColor = "red";
     col1.append("Current time");
   } else if (m.format("H") < m.format("13")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input1");
     x.style.backgroundColor = "green";
     col1.append(x);
   } else {
@@ -114,13 +114,14 @@ function calendar() {
     col2.style.backgroundColor = "red";
     col2.append("Current time");
   } else if (m.format("H") < m.format("14")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input2");
     x.style.backgroundColor = "green";
     col2.append(x);
   } else {
     col2.style.backgroundColor = "silver";
+
     col2.append("events happened");
   }
   //Time at 3PM
@@ -132,9 +133,9 @@ function calendar() {
     col3.style.backgroundColor = "red";
     col3.append("Current time");
   } else if (m.format("H") < m.format("15")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input3");
     x.style.backgroundColor = "green";
     col3.prepend(x);
   } else {
@@ -150,9 +151,9 @@ function calendar() {
     col4.style.backgroundColor = "red";
     col4.append("Current time");
   } else if (m.format("H") < m.format("16")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input4");
     x.style.backgroundColor = "green";
     col4.prepend(x);
   } else {
@@ -168,9 +169,9 @@ function calendar() {
     col5.style.backgroundColor = "red";
     col5.append("Current time");
   } else if (m.format("H") < m.format("17")) {
-    var x = document.createElement("INPUT");
+    x = document.createElement("INPUT");
     x.setAttribute("type", "text");
-    x.setAttribute("placeholder", "type your event here!!");
+    x.setAttribute("class", "input5");
     x.style.backgroundColor = "green";
     col5.prepend(x);
   } else {
@@ -179,12 +180,71 @@ function calendar() {
   }
 }
 calendar();
+function getFromLocalStorage() {
+  //5pm storage
+  var savedEvent5 = localStorage.getItem("5:00pm");
+  $(".input5").attr("value", savedEvent5);
+  //4pm storage
+  var savedEvent4 = localStorage.getItem("4:00pm");
+  $(".input4").attr("value", savedEvent4);
+  //3pm storage
+  var savedEvent3 = localStorage.getItem("3:00pm");
+  $(".input3").attr("value", savedEvent3);
+  //2pm storage
+  var savedEvent2 = localStorage.getItem("2:00pm");
+  $(".input2").attr("value", savedEvent2);
+  //1pm storage
+  var savedEvent1 = localStorage.getItem("1:00pm");
+  $(".input1").attr("value", savedEvent1);
+  //12pm storage
+  var savedEvent12 = localStorage.getItem("12:00pm");
+  $(".input12").attr("value", savedEvent12);
+  //11am storage
+  var savedEvent11 = localStorage.getItem("11:00am");
+  $(".input11").attr("value", savedEvent11);
+  //10am storage
+  var savedEvent10 = localStorage.getItem("10:00am");
+  $(".input10").attr("value", savedEvent10);
+  //9am storage
+  var savedEvent9 = localStorage.getItem("9:00am");
+  $(".input9").attr("value", savedEvent9);
+  console.log(savedEvent9);
+}
+getFromLocalStorage();
 
-$(".saveBtn").click(function() {
-  var thisId = $(this).attr();
-  var textValue = $("#text" + thisId).val();
-  events.push({ x: thisId, value: textValue });
-  console.log(events);
+$(".saveBtn5").click(function() {
+  var event5 = $(".input5").val();
+  localStorage.setItem("5:00pm", event5);
 });
-var events = [];
-localStorage.setItem(events, JSON.stringify());
+$(".saveBtn4").click(function() {
+  var event4 = $(".input4").val();
+  localStorage.setItem("4:00pm", event4);
+});
+$(".saveBtn3").click(function() {
+  var event3 = $(".input3").val();
+  localStorage.setItem("3:00pm", event3);
+});
+$(".saveBtn2").click(function() {
+  var event2 = $(".input2").val();
+  localStorage.setItem("2:00pm", event2);
+});
+$(".saveBtn1").click(function() {
+  var event1 = $(".input1").val();
+  localStorage.setItem("1:00pm", event1);
+});
+$(".saveBtn12").click(function() {
+  var event12 = $(".input12").val();
+  localStorage.setItem("12:00pm", event12);
+});
+$(".saveBtn11").click(function() {
+  var event11 = $(".input11").val();
+  localStorage.setItem("11:00am", event11);
+});
+$(".saveBtn10").click(function() {
+  var event10 = $(".input10").val();
+  localStorage.setItem("10:00am", event10);
+});
+$(".saveBtn9").click(function() {
+  var event9 = $(".input9").val();
+  localStorage.setItem("11:00am", event9);
+});
