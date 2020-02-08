@@ -4,17 +4,17 @@ var m = moment();
 var today = m.format("dddd, MMMM Do YYYY").toString();
 currentDay.append(today);
 var x;
-var time9 = document.querySelector("#time9");
-var time10 = document.querySelector("#time10");
-var time11 = document.querySelector("#time11");
-var time12 = document.querySelector("#time12");
-var time1 = document.querySelector("#time1");
-var time2 = document.querySelector("#time2");
-var time3 = document.querySelector("#time3");
-var time4 = document.querySelector("#time4");
 
 //calendar function
 function calendar() {
+  var time9 = document.querySelector("#time9");
+  var time10 = document.querySelector("#time10");
+  var time11 = document.querySelector("#time11");
+  var time12 = document.querySelector("#time12");
+  var time1 = document.querySelector("#time1");
+  var time2 = document.querySelector("#time2");
+  var time3 = document.querySelector("#time3");
+  var time4 = document.querySelector("#time4");
   //Time at 9AM
   var timeat9 = m.format("9 [AM]").toString();
   time9.append(timeat9);
@@ -23,7 +23,7 @@ function calendar() {
   if (timeat9 == m.format("H [AM]").toString()) {
     col9.style.backgroundColor = "red";
     col9.append("Current time");
-  } else if (m.format("H") < m.format("09")) {
+  } else if (m.format("H") > m.format("09")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input9");
@@ -41,7 +41,7 @@ function calendar() {
   if (timeat10 == m.format("H [AM]").toString()) {
     col10.style.backgroundColor = "red";
     col10.append("Current time");
-  } else if (m.format("H") < m.format("10")) {
+  } else if (m.format("H") > m.format("10")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input10");
@@ -59,7 +59,7 @@ function calendar() {
   if (timeat11 == m.format("h [AM]").toString()) {
     col11.style.backgroundColor = "red";
     col11.append("Current time");
-  } else if (m.format("H") < m.format("11")) {
+  } else if (m.format("H") > m.format("11")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input11");
@@ -77,7 +77,7 @@ function calendar() {
   if (timeat12 == m.format("h [PM]").toString()) {
     col12.style.backgroundColor = "red";
     col12.append("Current time");
-  } else if (m.format("H") < m.format("12")) {
+  } else if (m.format("H") > m.format("12")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input12");
@@ -95,7 +95,7 @@ function calendar() {
   if (timeat1 == m.format("h [PM]").toString()) {
     col1.style.backgroundColor = "red";
     col1.append("Current time");
-  } else if (m.format("H") < m.format("13")) {
+  } else if (m.format("H") > m.format("13")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input1");
@@ -113,7 +113,7 @@ function calendar() {
   if (timeat2 == m.format("h [PM]").toString()) {
     col2.style.backgroundColor = "red";
     col2.append("Current time");
-  } else if (m.format("H") < m.format("14")) {
+  } else if (m.format("H") > m.format("14")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input2");
@@ -132,7 +132,7 @@ function calendar() {
   if (timeat3 == m.format("h [PM]").toString()) {
     col3.style.backgroundColor = "red";
     col3.append("Current time");
-  } else if (m.format("H") < m.format("15")) {
+  } else if (m.format("H") > m.format("15")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input3");
@@ -150,7 +150,7 @@ function calendar() {
   if (timeat4 == m.format("h [PM]").toString()) {
     col4.style.backgroundColor = "red";
     col4.append("Current time");
-  } else if (m.format("H") < m.format("16")) {
+  } else if (m.format("H") > m.format("16")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input4");
@@ -168,7 +168,7 @@ function calendar() {
   if (timeat5 == m.format("h [PM]").toString()) {
     col5.style.backgroundColor = "red";
     col5.append("Current time");
-  } else if (m.format("H") < m.format("17")) {
+  } else if (m.format("H") > m.format("17")) {
     x = document.createElement("INPUT");
     x.setAttribute("type", "text");
     x.setAttribute("class", "input5");
