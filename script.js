@@ -24,12 +24,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input9");
   if (timeat9 == m.format("H [AM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col9.append(x);
   } else if (m.format("H") < m.format("09")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col9.append(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col9.append(x);
   }
@@ -42,12 +45,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input10");
   if (timeat10 == m.format("H [AM]").toString()) {
+    x.setAttribute("placeholder", "Current time!");
     x.style.backgroundColor = "red";
     col10.append(x);
   } else if (m.format("H") < m.format("10")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col10.append(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col10.append(x);
   }
@@ -63,12 +69,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input11");
   if (timeat11 == m.format("h [AM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col11.append(x);
   } else if (m.format("H") < m.format("11")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col11.append(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col11.append(x);
   }
@@ -81,12 +90,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input12");
   if (timeat12 == m.format("h [PM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col12.append(x);
   } else if (m.format("H") < m.format("12")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col12.append(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col12.append(x);
   }
@@ -99,12 +111,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input1");
   if (timeat1 == m.format("h [PM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col1.append(x);
   } else if (m.format("H") < m.format("13")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col1.append(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col1.append(x);
   }
@@ -117,12 +132,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input2");
   if (timeat2 == m.format("h [PM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col2.append(x);
   } else if (m.format("H") < m.format("14")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col2.append(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col2.append(x);
   }
@@ -135,12 +153,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input3");
   if (timeat3 == m.format("h [PM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col3.prepend(x);
   } else if (m.format("H") < m.format("15")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col3.prepend(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col3.prepend(x);
   }
@@ -153,12 +174,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input4");
   if (timeat4 == m.format("h [PM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col4.prepend(x);
   } else if (m.format("H") < m.format("16")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col4.prepend(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col4.prepend(x);
   }
@@ -171,12 +195,15 @@ function calendar() {
   x.setAttribute("type", "text");
   x.setAttribute("class", "input5");
   if (timeat5 == m.format("h [PM]").toString()) {
+    x.setAttribute("placeholder", "Current time");
     x.style.backgroundColor = "red";
     col5.prepend(x);
   } else if (m.format("H") < m.format("17")) {
+    x.setAttribute("placeholder", "Coming time");
     x.style.backgroundColor = "green";
     col5.prepend(x);
   } else {
+    x.setAttribute("placeholder", "Passed time");
     x.style.backgroundColor = "silver";
     col5.prepend(x);
   }
@@ -248,5 +275,5 @@ $(".saveBtn10").click(function() {
 });
 $(".saveBtn9").click(function() {
   var event9 = $(".input9").val();
-  localStorage.setItem("11:00am", event9);
+  localStorage.setItem("9:00am", event9);
 });
